@@ -1,6 +1,6 @@
 # CarrierWave for Aliyun OSS
 
-This gem adds support for [Aliyun OSS](http://oss.aliyun.com) to [CarrierWave](https://github.com/jnicklas/carrierwave/)
+This gem forked from carrierwave-aliyun and adds CRUD functionality for [Aliyun OSS](http://oss.aliyun.com) to [CarrierWave](https://github.com/jnicklas/carrierwave/)
 
 ## Installation
 
