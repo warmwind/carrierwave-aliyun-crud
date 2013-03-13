@@ -1,6 +1,8 @@
 require "carrierwave/storage/aliyun"
 require 'carrierwave/processing/mime_types'
 require "carrierwave/aliyun/configuration"
+
+
 CarrierWave.configure do |config|
   config.storage_engines.merge!({:aliyun => "CarrierWave::Storage::Aliyun"})
 end

@@ -1,3 +1,4 @@
+#encoding: utf-8
 require 'rubygems'
 require 'rspec'
 require 'rspec/autorun'
@@ -6,6 +7,7 @@ require 'active_record'
 require "carrierwave"
 require 'carrierwave/orm/activerecord'
 require 'carrierwave/processing/mini_magick'
+require 'uri'
 
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))

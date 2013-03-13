@@ -4,6 +4,7 @@ require 'digest/hmac'
 require 'digest/md5'
 require 'net/http'
 require "rest-client"
+require 'uri'
 
 module CarrierWave
   module Storage
@@ -26,14 +27,14 @@ module CarrierWave
           path = "#{@aliyun_bucket}/#{path}"
           url = "http://#{@aliyun_host}/#{path}"
           headers = generate_header("PUT", path, content_md5, options).merge!({"Content-Length" => file.length})
-          RestClient.put url, file, headers
+          RestClient.put URI.escape(url), file, headers
         end
 
         def get(path, options={})
           path = "#{@aliyun_bucket}/#{path}"
           url = "http://#{@aliyun_host}/#{path}"
           headers = generate_header "GET", path, "", options
-          RestClient.get url, headers
+          RestClient.get URI.escape(url), headers
         end
 
         def delete path
@@ -45,7 +46,7 @@ module CarrierWave
               "Date" => date,
               "Host" => @aliyun_host,
           }
-          RestClient.delete url, headers
+          RestClient.delete URI.escape(url), headers
         end
 
         private
