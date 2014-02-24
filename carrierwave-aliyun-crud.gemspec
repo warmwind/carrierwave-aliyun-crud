@@ -3,9 +3,9 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "carrierwave-aliyun-crud"
-  s.version     = "0.1.1"
+  s.version     = "0.1.2"
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Jiang Peng"]
+  s.authors     = ["JIANG Peng"]
   s.email       = ["pengj0520@gmail.com"]
   s.homepage    = "https://github.com/warmwind/carrierwave-aliyun-crud"
   s.summary     = %q{Aliyun OSS support for Carrierwave}

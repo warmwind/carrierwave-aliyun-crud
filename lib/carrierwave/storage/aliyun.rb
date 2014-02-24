@@ -103,7 +103,9 @@ module CarrierWave
         # [String] contents of the file
         #
         def read
-          oss_connection.get(@path)
+          object = oss_connection.get(@path)
+          @headers = object.headers
+          object.body
         end
 
         ##
