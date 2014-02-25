@@ -95,6 +95,14 @@ module CarrierWave
           @path
         end
 
+        def extension
+          @path.split('.').last
+        end
+
+        def filename
+          @path.split('/').last
+        end
+
         ##
         # Reads the contents of the file from Cloud Files
         #
